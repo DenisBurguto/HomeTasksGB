@@ -49,7 +49,7 @@ if (num % 2 == 0) Console.Write("Inputted number is even");
 else Console.Write("Inputted number is odd");
 */
 
-//Task6. Input number n, output - all even numbers in range 1 to n
+//Task8. Input number n, output - all even numbers in range 1 to n
 /*
 Console.Write("Hello, please enter number ");
 int num = Convert.ToInt32(Console.ReadLine());
