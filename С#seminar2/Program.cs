@@ -26,7 +26,7 @@ else Console.Write("Wrong input ");
 
 int FindThirdDig(int num)
 {
-    while(num >= 999)
+    while(num >= 1000)
     {
         num= num/10;
     }
