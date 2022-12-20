@@ -23,22 +23,16 @@ else Console.Write("Wrong input ");
 
 
 // Task13. Input int number , output third digit ( from lett to right!!!) if it exist, or information "no such digit"
-/*
+
 int FindThirdDig(int num)
 {
-    int dig = 0;
-    int testNum = num;
-    while (testNum / 10 != 0)
+    while(num >= 999)
     {
-        testNum = testNum / 10;
-        dig++;
+        num= num/10;
     }
-    while (dig - 3 >= 0)
-    {
-        num = num / 10;
-        dig--;
-    }
+    
     return num % 10;
+    
 }
 
 
@@ -46,7 +40,7 @@ Console.Write("Welcome! Please input  number ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number / 100 != 0) Console.WriteLine($"The third digit of the number is {FindThirdDig(number)}");
 else Console.Write("In the inputted number three is no third digit ");
-*/
+
 
 // Task15. input number corresponded to week day and output if this day is day off or not.
 /*
