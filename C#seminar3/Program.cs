@@ -1,4 +1,5 @@
-﻿// Task 19. Input integer number. Check if number is palindrome or not
+﻿/*
+// Task 19. Input integer number. Check if number is palindrome or not
 bool Palindrome(long number)
 {
     long testNum = number, mirrorNum = 0;
@@ -17,7 +18,7 @@ long num = Convert.ToInt64(Console.ReadLine());
 if (Palindrome(num)) Console.Write("Amazing, it's palindrome! ");
 else Console.Write("just number, not palindrome");
 
-
+*/
 /*
 // Task 21. Input - coordinates of two dots in 3D space and find the distance between them. 
 
