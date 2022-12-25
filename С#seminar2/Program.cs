@@ -39,7 +39,7 @@ int FindThirdDig(int num)
 Console.Write("Welcome! Please input  number ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number / 100 != 0) Console.WriteLine($"The third digit of the number is {FindThirdDig(number)}");
-else Console.Write("In the inputted number three is no third digit ");
+else Console.Write("In the inputted number there is no third digit ");
 
 
 // Task15. input number corresponded to week day and output if this day is day off or not.
