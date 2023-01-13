@@ -79,4 +79,26 @@ Console.WriteLine($"The result of A ({num}) in natural B power ({Math.Abs(pow)})
 
 */
 
+//Task 27: Input: number, output: sum of its digits.
+//452 -> 11
+//82 -> 10
+//9012 -> 12
+
+int SumOfDigits(int num)
+{
+    int result = 0, testNum = Math.Abs(num);
+    while (testNum != 0)
+    {
+        result += testNum % 10;
+        testNum /= 10;
+    }
+    return result;
+
+}
+
+Console.Write("Please input integer number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+int digitsSum = SumOfDigits(num);
+Console.WriteLine($"The sum of the digits in entered number ({num}) is {digitsSum} ");
 
