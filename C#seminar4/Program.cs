@@ -1,57 +1,4 @@
-﻿/*
-int GetSum(int num)
-{
-    int sum = 0;
-    for (int i = 1; i <= num; i++)
-    {
-        sum = sum + i; //sum+=i
-    }
-    return sum;
-}
-
-Console.Write("Please input number > 1 ");
-int num = Convert.ToInt32(Console.ReadLine());
-int result = GetSum(num);
-Console.WriteLine($" {GetSum(num)} ");
-
-*/
-
-//Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
-
-
-
-//Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
-/*
-
-int[] CreateRandomArray(int length, int minValue, int maxValue)
-{
-    int[] array = new int[length];
-    for (int i = 0; i < length; i++)
-        array[i] = new Random().Next(minValue, maxValue + 1);
-    return array;
-
-}
-
-void ShowArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-
-    }
-    Console.WriteLine();
-}
-
-Console.Write("Please input array length ");
-int length = Convert.ToInt32(Console.ReadLine());
-Console.Write("Please input array minValue ");
-int minValue = Convert.ToInt32(Console.ReadLine());
-Console.Write("Please input array maxValue ");
-int maxValue = Convert.ToInt32(Console.ReadLine());
-
-int[] newArray = CreateRandomArray(length, minValue, maxValue);
-ShowArray(newArray);
-*/
+﻿
 /*
 //task 25. input: two numbers (A и B) , output: A in a natural power B. Code without using internal Pow method.
 //3, 5 -> 243 (3⁵)
@@ -78,6 +25,7 @@ Console.WriteLine($"The result of A ({num}) in natural B power ({Math.Abs(pow)})
 //else Console.WriteLine(" incorrect input, entered B is not natural ");
 
 */
+/*
 
 //Task 27: Input: number, output: sum of its digits.
 //452 -> 11
@@ -101,4 +49,40 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 int digitsSum = SumOfDigits(num);
 Console.WriteLine($"The sum of the digits in entered number ({num}) is {digitsSum} ");
+*/
+
+/*
+
+//Task 29: input: array length m and all array elements, output:  the array itself( to console as well)
+//1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+//6, 1, 33 -> [6, 1, 33]
+
+int[] GetArrayFromUser(int length)
+{
+    int[] array = new int[length];
+    for (int i = 0; i < length; i++)
+    {
+        Console.Write($"Please input array number with index {i}: ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    return array;
+}
+
+void ArrayToConsole(int[] array)
+{
+    Console.Write("Your array is [");
+    for (int i = 0; i < array.Length-1; i++)
+    {
+        Console.Write(array[i] + ", ");
+    }
+    Console.Write($"{array[array.Length-1]}]");
+    Console.WriteLine();
+}
+
+Console.Write("Please input array length ");
+int length = Convert.ToInt32(Console.ReadLine());
+int[] yourArray = GetArrayFromUser(length);
+ArrayToConsole(yourArray);
+
+*/
 
