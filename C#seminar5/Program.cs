@@ -101,7 +101,7 @@ void DoubleArrayToConsole(double[] array)
 
 double MaxMinDif(double[] array)
 {
-    double max = 0, min = 0;
+    double max = array[0], min = array[0] ;
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] >= max) max = array[i];
