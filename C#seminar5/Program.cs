@@ -79,7 +79,7 @@ ArrayToConsole(newArray);
 int res = CountSumOddIndex(newArray);
 Console.WriteLine($"The sum of all numbers at odd position in array is {res} ");
 */
-
+/*
 //Task 38: Create random array filled with double numbers. Return the difference between max and min value of elements.
 //[3 7 22 2 78] -> 76
 
@@ -123,3 +123,4 @@ DoubleArrayToConsole(newArray);
 
 Console.WriteLine($"The difference between Max and Min value in array is {MaxMinDif(newArray)} ");
 
+*/
