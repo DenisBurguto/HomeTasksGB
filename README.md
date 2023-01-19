@@ -6,3 +6,4 @@
 # Year 2023
 ## [C#seminar4](https://github.com/DenisBurguto/HomeTasksGB/tree/main/C%23seminar4) - home task after fourth seminar  "C# introducing"
 ## [C#seminar5](https://github.com/DenisBurguto/HomeTasksGB/tree/main/C%23seminar5) - home task after fifth seminar  "C# introducing"
+## [C#seminar6](https://github.com/DenisBurguto/HomeTasksGB/tree/main/C%23seminar6) - home task after sixth seminar  "C# introducing"
