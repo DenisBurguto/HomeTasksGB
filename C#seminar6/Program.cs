@@ -56,5 +56,6 @@ if (k1 != k2)
     Console.Write("your lines are crossing at coordinates [X,Y]: ");
     DoubleArrayToConsole(LinesCrossing(k1, b1, k2, b2));
 }
-else Console.WriteLine("your lines are parallel ");
+else if(b1 != b2) Console.WriteLine("your lines are parallel ");
+else Console.WriteLine("your lines are just one line");
 */
