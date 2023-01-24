@@ -120,13 +120,81 @@ double[,] doubleRandomArray = CreateRandom2dDoubleArray();
 Show2dDoubleArray(doubleRandomArray);
 */
 
-
+/*
 //Task 50. Input - two numbers as possible  indexes [rows, columns] in 2d array, output the element value if it exists or  information or inform if it doesn't.
 // for example:
 //1 4 7 2
 //5 9 2 3
 //8 4 2 4
 //1 7 -> there is no element with such index in array
+
+int[,] CreateFullRandom2dArray()
+{
+    int rows = new Random().Next(2, 15);
+    int columns = new Random().Next(2, 15);
+
+    int[,] array = new int[rows, columns];
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            array[i, j] = new Random().Next(-10, 11);
+        }
+
+    }
+    return array;
+}
+
+void Show2DArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i, j] + "\t");
+
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+void ArrayGameGuessTest(int[,] array)
+{
+    Console.WriteLine(" Let's play the game. Please try to guess the  row index and column index of element in  random 2D array. You have 3 attempts");
+    Console.WriteLine();
+    int count = 0;
+    while (count < 3)
+    {
+        Console.Write(" please quess the  row index: ");
+        int i = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write(" please guess the column index: ");
+        int j = Convert.ToInt32(Console.ReadLine());
+
+        if (array.GetLength(0) > i && array.GetLength(1) > j)
+        { Console.WriteLine($"Good! you got it! this is number {array[i, j]}"); Console.WriteLine(); }
+        else
+        { Console.WriteLine("Sorry, there is no such element in array, maybe next time you will be lucky!"); Console.WriteLine(); }
+        count++;
+    }
+    Console.WriteLine("By the way, here is our array: "); Console.WriteLine();
+
+    Show2DArray(array);
+
+}
+
+int[,] array2d = CreateFullRandom2dArray();
+ArrayGameGuessTest(array2d);
+*/
+
+
+
+
+
+
+
+
+
 
 
 
