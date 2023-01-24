@@ -1,4 +1,3 @@
-//
 /*
 //Task 47. Create 2d array  m×n filled with random double numbers.
 //m = 3, n = 4.
@@ -193,3 +192,6 @@ Console.WriteLine("Here is arithmetic average of each column of array above: ");
 DoubleArrayToConsole(arryaArith);
 
 */
+
+
+// 
