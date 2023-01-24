@@ -1,4 +1,5 @@
-﻿/*
+//
+/*
 //Task 47. Create 2d array  m×n filled with random double numbers.
 //m = 3, n = 4.
 //0,5 7 -2 -0,2
