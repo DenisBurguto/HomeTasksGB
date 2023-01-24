@@ -187,21 +187,86 @@ int[,] array2d = CreateFullRandom2dArray();
 ArrayGameGuessTest(array2d);
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*
 //Task 52. Create 2d array  m×n filled with random integer numbers. output the arithmetic average of each column.
 //for example:
 //1 4 7 2
 //5 9 2 3
 //8 4 2 4
 //arithmetic average of each column : 4,6; 5,6; 3,6; 3.
+
+int[,] CreateRandom2dArray()
+{
+
+    Console.WriteLine("Please input array rows: ");
+    int rows = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Please input array columns: ");
+    int columns = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Please input array minValue: ");
+    int minValue = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Please input array maxValue: ");
+    int maxValue = Convert.ToInt32(Console.ReadLine());
+
+    int[,] array = new int[rows, columns];
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            array[i, j] = new Random().Next(minValue, maxValue + 1);
+        }
+
+    }
+    return array;
+}
+
+void Show2DArray(int[,] array)
+
+{
+    Console.WriteLine();
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i, j] + "\t");
+
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+void DoubleArrayToConsole(double[] array)
+{
+    Console.WriteLine();
+    Console.Write("[");
+    for (int i = 0; i < array.Length - 1; i++)
+        Console.Write(array[i] + ", ");
+    Console.Write($"{array[array.Length - 1]}]");
+    Console.WriteLine();
+}
+
+double[] ArithmeticAvg2dArrayColumns(int[,] array)
+{
+
+    double[] result = new double[array.GetLength(1)];
+
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        int sum = 0;
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            sum += array[i, j];
+        }
+        result[j] = (double)sum / array.GetLength(0);
+
+    }
+    return result;
+}
+
+int[,] arrayTest = CreateRandom2dArray();
+Console.WriteLine("Here is our array: ");
+Show2DArray(arrayTest);
+double[] arryaArith = ArithmeticAvg2dArrayColumns(arrayTest);
+Console.WriteLine("Here is arithmetic average of each column of array above: ");
+DoubleArrayToConsole(arryaArith);
+
+*/
