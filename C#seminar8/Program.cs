@@ -214,14 +214,80 @@ else
    Show2DArray(resMultiply);
 }
 */
+/*
 
-
-//Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
-//Массив размером 2 x 2 x 2
+// Task 60. Create 3d array filed with unique two-digit numbers. Show 3d array to console   by rows with element's indexes or by layers.
+//For example array  2 x 2 x 2:
 //66(0,0,0) 25(0,1,0)
 //34(1,0,0) 41(1,1,0)
 //27(0,0,1) 90(0,1,1)
 //26(1,0,1) 55(1,1,1)
+
+
+int[,,] CreateRandom3dArray(int rows, int columns, int layers)
+{
+    int[] numberToChoose = new int[90];// maximum positive two-digit unique numbers
+    numberToChoose[0] = 10;
+    for (int n = 1; n < numberToChoose.Length; n++)
+    {
+        numberToChoose[n] = numberToChoose[0] + n;
+    }
+
+    Random index = new Random();
+    int[,,] array = new int[rows, columns, layers];
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            for (int k = 0; k < layers; k++)
+            {
+                do
+                {
+                    int n = index.Next(0, 90);
+                    array[i, j, k] = numberToChoose[n];
+                    numberToChoose[n] = 0;
+                }
+                while (array[i, j, k] == 0);
+            }
+        }
+    }
+    return array;
+}
+
+void Show3DArray(int[,,] array)
+{
+    Console.WriteLine();
+    for (int k = 0; k < array.GetLength(2); k++)
+    {
+        Console.WriteLine("Here is our 3d array layer with index " + k);
+
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            for (int j = 0; j < array.GetLength(1); j++)
+
+                Console.Write(array[i, j, k] + "(" + i + "," + j + "," + k + ")" + "\t");
+            Console.WriteLine();
+        }
+        Console.WriteLine();
+    }
+}
+Console.Write("Please input array rows:  ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Please input array columns:  ");
+int columns = Convert.ToInt32(Console.ReadLine());
+Console.Write("Please input array layers:  ");
+int layers = Convert.ToInt32(Console.ReadLine());
+
+if (rows * columns * layers > 90)
+    Console.WriteLine("It's impossible to generate 3d array filled with unique two-digit numbers with such dimentions");
+else
+{
+    int[,,] test3dArray = CreateRandom3dArray(rows, columns, layers);
+    Show3DArray(test3dArray);
+}
+*/
+
 
 //Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4. 
 //Например, на выходе получается вот такой массив:
