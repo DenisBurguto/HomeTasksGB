@@ -8,5 +8,6 @@
 ## [C#seminar5](https://github.com/DenisBurguto/HomeTasksGB/tree/main/C%23seminar5) - home task after fifth seminar  "C# introducing"
 ## [C#seminar6](https://github.com/DenisBurguto/HomeTasksGB/tree/main/C%23seminar6) - home task after sixth seminar  "C# introducing"
 ## [C#seminar7](https://github.com/DenisBurguto/HomeTasksGB/tree/main/C%23seminar7) - home task after seventh seminar  "C# introducing"
+## [C#seminar8](https://github.com/DenisBurguto/HomeTasksGB/tree/main/C%23seminar8) - home task after eighth seminar  "C# introducing"
 
 
