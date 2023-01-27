@@ -192,6 +192,3 @@ Console.WriteLine("Here is arithmetic average of each column of array above: ");
 DoubleArrayToConsole(arryaArith);
 
 */
-
-
-// 
