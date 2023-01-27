@@ -287,11 +287,62 @@ else
     Show3DArray(test3dArray);
 }
 */
-
-
-//Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4. 
-//Например, на выходе получается вот такой массив:
+/*
+//Task 62. Create 2d array  m x n.  Fille it with numbers "by spiral" or like "snake"
+//for example, show such array:
 //01 02 03 04
 //12 13 14 05
 //11 16 15 06
 //10 09 08 07
+
+int[,] CreateSnake2dArray()
+{
+    Console.Write("Please input array rows:  ");
+    int rows = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Please input array columns:  ");
+    int columns = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Please input array first element:  ");
+    int start = Convert.ToInt32(Console.ReadLine()) - 1; // to start array from user number need to minus 1
+
+    int[,] array = new int[rows, columns];
+    for (int i = 0; i < rows; i++)
+    {
+        if (i % 2 == 0)
+        {
+            array[i, 0] = start + 1;
+            for (int j = 1; j < columns; j++)
+            {
+                array[i, j] = array[i, 0] + j;
+                start = array[i, j];
+            }
+        }
+        else
+        {
+            array[i, columns - 1] = start + 1;
+            for (int j = columns - 2; j >= 0; j--)
+            {
+                array[i, j] = array[i, columns - 1] + columns - 1 - j;
+                start = array[i, j];
+            }
+        }
+    }
+    return array;
+}
+
+void Show2DArray(int[,] array)
+{
+    Console.WriteLine();
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write( $"{array[i, j]:D2}"  + "\t");
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+int[,] testArray = CreateSnake2dArray();
+Console.WriteLine("Here is your snake-liked array:");
+Show2DArray(testArray);
+
+*/
