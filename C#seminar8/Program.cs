@@ -346,3 +346,31 @@ Console.WriteLine("Here is your snake-liked array:");
 Show2DArray(testArray);
 
 */
+
+int[] CreateRandomArray()
+{
+    int[] array = new int[(200-5)/4+3];
+    array[array.Length-1]=199;
+    array[array.Length-2]=197;
+    for (int i = array.Length-3; i >=0; i--)
+        array[i] = array[i+1]-4;
+
+
+    Console.WriteLine(array.Length);
+    return array;
+
+
+}
+
+void ArrayToConsole(int[] array)
+{
+    Console.Write("Your array is [");
+    for (int i = 0; i < array.Length - 1; i++)
+        Console.Write(array[i] + ", ");
+    Console.Write($"{array[array.Length - 1]}]");
+    Console.WriteLine();
+}
+int[] test = CreateRandomArray();
+ArrayToConsole(test);
+
+
