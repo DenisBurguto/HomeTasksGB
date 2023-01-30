@@ -67,7 +67,7 @@ while (n <= 0);
 Console.WriteLine($"Here is the sum of all natural numbers  between M and N both included: {GetSumNums(m, n)}");
 */
 
-//Task 68: input positive numbers M and N. Using recursion output Akkerman's function.
+//Task 68: input non-negative numbers M and N. Using recursion output Akkerman's function.
 //m = 2, n = 3 -> A(m,n) = 9
 //m = 3, n = 2 -> A(m,n) = 29
 
