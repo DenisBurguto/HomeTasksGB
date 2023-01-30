@@ -373,4 +373,3 @@ void ArrayToConsole(int[] array)
 int[] test = CreateRandomArray();
 ArrayToConsole(test);
 
-
