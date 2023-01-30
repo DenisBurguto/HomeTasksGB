@@ -84,19 +84,19 @@ do
 {
     Console.Write("Please input positive integer number M: ");
     bool pars = int.TryParse(Console.ReadLine(), out int i);
-    if (pars != true || i <= 0) Console.WriteLine("Incorrect input");
+    if (pars != true || i < 0) Console.WriteLine("Incorrect input");
     m = i;
 }
-while (m <= 0);
+while (m < 0);
 
 int n = -1;
 do
 {
     Console.Write("Please input positive integer number N: ");
     bool pars = int.TryParse(Console.ReadLine(), out int i);
-    if (pars != true || i <= 0) Console.WriteLine("Incorrect input");
+    if (pars != true || i < 0) Console.WriteLine("Incorrect input");
     n = i;
 }
-while (n <= 0);
+while (n < 0);
 
 Console.WriteLine("The Akkerman's function result for M,N is: " + AkkermanFunction(m, n));
