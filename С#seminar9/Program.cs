@@ -66,17 +66,16 @@ while (n <= 0);
 
 Console.WriteLine($"Here is the sum of all natural numbers  between M and N both included: {GetSumNums(m, n)}");
 */
-
+/*
 //Task 68: input non-negative numbers M and N. Using recursion output Akkerman's function.
 //m = 2, n = 3 -> A(m,n) = 9
 //m = 3, n = 2 -> A(m,n) = 29
 
 int AkkermanFunction(int m, int n)
 {
-
-    if (m > 0 && n > 0) return AkkermanFunction(m - 1, AkkermanFunction(m, n - 1));
+    if (m == 0) return n + 1;
     else if (m != 0 && n == 0) return AkkermanFunction(m - 1, 1);
-    else return n + 1;
+    else return AkkermanFunction(m - 1, AkkermanFunction(m, n - 1));
 }
 
 int m = -1;
@@ -100,3 +99,38 @@ do
 while (n < 0);
 
 Console.WriteLine("The Akkerman's function result for M,N is: " + AkkermanFunction(m, n));
+*/
+
+
+
+ int MySqrt(int x) {
+      
+    int start = x; 
+    
+     do{
+      start = start / 2;
+
+     Console.WriteLine(x/start);
+     }
+
+     while( x /start < start); 
+    int end = x/start;   
+      
+    
+
+    
+
+
+     Console.WriteLine(x/start);
+      Console.WriteLine(start);   
+    return (start+end)/2;
+       
+       
+
+
+        
+
+        
+    }
+
+    Console.WriteLine(MySqrt(10000));
