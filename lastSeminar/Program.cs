@@ -141,13 +141,39 @@ Console.WriteLine();
 ShowNum(10, 15);
 */
 
-//Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B( положительное и отрицательное).
 
-double AtoBdegree(double a, int b)
-{
-    if (b > 0) return AtoBdegree(a, b - 1) * a;
-    else if (b < 0) return AtoBdegree(a, b + 1) * (1 / a);
-    else return 1;
+
+int GetSumOfSqrDigit(int num){
+int sum=0;
+
+        while (num > 0)
+        {
+            sum += (int)Math.Pow(num % 10,2);
+            num /= 10;
+        }
+return sum;
 }
 
-Console.WriteLine(AtoBdegree(2, -3));
+
+bool IsHappy(int n)
+{
+    int start = GetSumOfSqrDigit(n);
+    Console.WriteLine(start);
+    int test =GetSumOfSqrDigit(start);
+    int test2 = GetSumOfSqrDigit(test);
+    n= test2;
+    while ( test !=1){
+    test = GetSumOfSqrDigit(n);
+    n = test;
+    //Console.WriteLine(test);
+    if( test == test2) return false;  
+    }
+    return true;
+
+
+    
+
+  
+
+}
+Console.Write(IsHappy(19434334));
